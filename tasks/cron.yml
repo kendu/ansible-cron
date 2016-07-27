@@ -1,0 +1,12 @@
+---
+# Cron tasks
+
+- name: Set cronjobs
+  template:
+    src: "{{ item }}"
+    dest: /etc/cron.d
+    owner: root
+    group: root
+    mode: 0644
+  with_fileglob:
+      - "{{ cron_files_local_dir }}/*"

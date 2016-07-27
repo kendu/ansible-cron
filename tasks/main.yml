@@ -1,0 +1,4 @@
+---
+# Main cron tasks file
+
+- include: cron.yml
